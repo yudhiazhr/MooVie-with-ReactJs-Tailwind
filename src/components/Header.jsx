@@ -76,7 +76,7 @@ function Header() {
                       href="#home"
                       className="text-base text-light py-2 mx-8 flex group-hover:text-primary"
                     >
-                      Popular
+                      Movie
                     </a>
                   </li>
                   <li className="group">
@@ -84,7 +84,7 @@ function Header() {
                       href="#home"
                       className="text-base text-light py-2 mx-8 flex group-hover:text-primary"
                     >
-                      About
+                      Tv Series
                     </a>
                   </li>
                   <li className="group">
@@ -92,7 +92,7 @@ function Header() {
                       href="#home"
                       className="text-base text-light py-2 mx-8 flex group-hover:text-primary"
                     >
-                      Contact
+                      Genres
                     </a>
                   </li>
                 </ul>

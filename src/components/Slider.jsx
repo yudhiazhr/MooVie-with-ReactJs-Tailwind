@@ -1,47 +1,46 @@
-import { useEffect, useState } from "react";
-import GlobalApi from "../services/GlobalApi.jsx";
-import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
-import { useRef } from "react";
+import { useEffect, useState } from "react"
+import GlobalApi from "../services/GlobalApi.jsx"
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi"
+import { useRef } from "react"
 
-const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original";
-const screenWidth = window.innerWidth;
+const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original"
+const screenWidth = window.innerWidth
 
 export function Slider() {
-  const [movieList, setMovieList] = useState([]);
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const elementRef = useRef();
+  const [movieList, setMovieList] = useState([])
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const elementRef = useRef()
 
   useEffect(() => {
-    getTrendingMovies();
+    getTrendingMovies()
 
     const interval = setInterval(() => {
-      const nextSlide = (currentSlide + 1) % movieList.length;
-      setCurrentSlide(nextSlide);
-      sliderRight(elementRef.current);
-    }, 5000);
+      const nextSlide = (currentSlide + 1) % movieList.length
+      setCurrentSlide(nextSlide)
+      sliderRight(elementRef.current)
+    }, 5000)
 
-    return () => clearInterval(interval);
-  }, [currentSlide, movieList.length]);
+    return () => clearInterval(interval)
+  }, [currentSlide, movieList.length])
 
   const getTrendingMovies = () => {
     GlobalApi.getTrendingVideos.then((resp) => {
-      console.log(resp.data.results);
-      setMovieList(resp.data.results);
-    });
-  };
+      setMovieList(resp.data.results)
+    })
+  }
 
   const sliderRight = (element) => {
-    element.scrollLeft += screenWidth - 44;
+    element.scrollLeft += screenWidth - 44
     if (currentSlide === movieList.length - 1) {
       setTimeout(() => {
-        element.scrollLeft = 0;
-      }, 2000);
+        element.scrollLeft = 0
+      }, 2000)
     }
-  };
+  }
 
   const sliderLeft = (element) => {
-    element.scrollLeft -= screenWidth - 44;
-  };
+    element.scrollLeft -= screenWidth - 44
+  }
 
   return (
     <>
@@ -69,5 +68,5 @@ export function Slider() {
         </div>
       </div>
     </>
-  );
+  )
 }
