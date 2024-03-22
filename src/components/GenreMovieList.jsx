@@ -4,12 +4,12 @@ import GenresList from "/src/Constant/GenreList.jsx";
 export const GenreMovieList = () => {
   return (
     <>
-      <div>
+      <div className="pb-24">
         {GenresList.genere.map(
           (item, index) =>
-            index <= 1 && (
-              <div key={item.id} className="p-12 px-8 md:px-16">
-                <h2 className="flex mb-4 text-[20px] text-light font-bold">
+            index <= 4 && (
+              <div key={item.id} className="pt-12 px-8 md:px-16">
+                <h2 className="flex pl-4 text-[24px] text-light font-bold">
                   {item.name}
                 </h2>
                 <MovieList genreId={item.id}/>
