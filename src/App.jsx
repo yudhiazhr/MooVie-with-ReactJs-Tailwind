@@ -4,20 +4,18 @@ import Header from "./components/Header.jsx";
 import ProductionHouse from "./components/ProductionHouse.jsx";
 import { Slider } from "./components/Slider.jsx";
 
-
-
 function App() {
-
-  
   return (
     <>
-    <Header/>
-    
-    <Slider/>
+      <div className="container">
+        <Header />
 
-    <ProductionHouse/>
+        <Slider />
 
-    <GenreMovieList/>
+        <ProductionHouse />
+
+        <GenreMovieList />
+      </div>
     </>
   );
 }

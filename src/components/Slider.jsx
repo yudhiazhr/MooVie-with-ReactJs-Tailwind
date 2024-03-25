@@ -46,11 +46,11 @@ export function Slider() {
     <>
       <div>
         <HiChevronLeft
-          className="  text-light text-[30px] absolute mx-8 mt-[160px] md:mt-[280px]  cursor-pointer"
+          className=" hidden md:block  text-light text-[30px] absolute mx-8 mt-[160px] md:mt-[280px]  cursor-pointer left-8 md:left-28 lg:left-52"
           onClick={() => sliderLeft(elementRef.current)}
         />
         <HiChevronRight
-          className=" text-light text-[30px] absolute mx-16 mt-[160px] md:mt-[280px] cursor-pointer right-0"
+          className="hidden  md:block  text-light text-[30px] absolute mx-16 mt-[160px] md:mt-[280px] cursor-pointer right-0 md:right-20 lg:right-44"
           onClick={() => sliderRight(elementRef.current)}
         />
 

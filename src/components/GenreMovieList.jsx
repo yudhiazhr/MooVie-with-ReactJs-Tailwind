@@ -8,8 +8,8 @@ export const GenreMovieList = () => {
         {GenresList.genere.map(
           (item, index) =>
             index <= 4 && (
-              <div key={item.id} className="pt-12 px-8 md:px-16">
-                <h2 className="flex pl-4 text-[24px] text-light font-bold">
+              <div key={item.id} className="pt-12 px-0">
+                <h2 className="flex pl-4 md:text-[24px] text-light font-bold">
                   {item.name}
                 </h2>
                 <MovieList genreId={item.id}/>
