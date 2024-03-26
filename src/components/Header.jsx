@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import "../App.css";
+import { Link } from "react-router-dom";
 
 function Header() {
   useEffect(() => {
@@ -40,12 +41,12 @@ function Header() {
         <div className="container">
           <div className="flex items-center justify-between relative">
             <div className="px-4">
-              <a
-                href="#home"
+              <Link
+                to={`/home`}
                 className="font-bold text-xl text-primary block py-6 lg:text-2xl"
               >
                 MooVies
-              </a>
+              </Link>
             </div>
             <div className="flex items-center px-4">
               <button
@@ -64,12 +65,12 @@ function Header() {
               >
                 <ul className="block lg:flex">
                   <li className="group">
-                    <a
-                      href="#home"
+                    <Link
+                      to="/home"
                       className="text-base text-light py-2 mx-8 flex group-hover:text-primary"
                     >
                       Home
-                    </a>
+                    </Link>
                   </li>
                   <li className="group">
                     <a

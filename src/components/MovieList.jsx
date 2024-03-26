@@ -3,6 +3,7 @@ import GlobalApi from "../services/GlobalApi";
 import { useState } from "react";
 import { IoChevronBackOutline, IoChevronForwardOutline } from "react-icons/io5";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original";
 
 // eslint-disable-next-line react/prop-types
@@ -45,10 +46,10 @@ const MovieList = ({ genreId }) => {
             absolute right-0 md:mt-[110px] lg:mt-[150px]
             `}
         />
-
-        <div
-          ref={elementRef}
+        <Link
+          to={`/detail-movies`}
           className=" flex gap-6 overflow-x-auto px-4 scrollbar-none scroll-smooth no-scrollbar"
+          ref={elementRef}
         >
           {movieList.map((item) => (
             <img
@@ -59,9 +60,7 @@ const MovieList = ({ genreId }) => {
             hover:scale-110 transition-all duration-150 ease-in"
             ></img>
           ))}
-        </div>
-
-        
+        </Link>
       </div>
     </>
   );
