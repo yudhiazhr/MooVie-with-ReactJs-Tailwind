@@ -9,9 +9,8 @@ export const MainRoutes = () => {
             <BrowserRouter>
                 <Routes>
                     <Route path ="/" element ={<Layout/>}>
-                        <Route index element={<Home/>} title="home"/>
-                        <Route path="home" element={<Home />} />
-                        <Route path="detail-movies" element={<DetailMovies />} />
+                        <Route index element={<Home/>}/>
+                        <Route path="movie/:id" element={<DetailMovies />} />
                     </Route>
                 </Routes>
             </BrowserRouter>

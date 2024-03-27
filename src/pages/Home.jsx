@@ -1,4 +1,4 @@
-import { GenreMovieList } from "../components/GenreMovieList.jsx";
+import { GenreMovieList } from "./GenreMovieList.jsx";
 import ProductionHouse from "../components/ProductionHouse.jsx";
 import { Slider } from "../components/Slider.jsx";
 

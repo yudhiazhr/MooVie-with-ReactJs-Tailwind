@@ -4,7 +4,7 @@ import GenresList from "/src/Constant/GenreList.jsx";
 export const GenreMovieList = () => {
   return (
     <>
-      <div className="pb-24">
+      <div className="pb-12">
         {GenresList.genere.map(
           (item, index) =>
             index <= 4 && (

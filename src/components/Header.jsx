@@ -42,7 +42,7 @@ function Header() {
           <div className="flex items-center justify-between relative">
             <div className="px-4">
               <Link
-                to={`/home`}
+                to={`/`}
                 className="font-bold text-xl text-primary block py-6 lg:text-2xl"
               >
                 MooVies
@@ -66,7 +66,7 @@ function Header() {
                 <ul className="block lg:flex">
                   <li className="group">
                     <Link
-                      to="/home"
+                      to="/"
                       className="text-base text-light py-2 mx-8 flex group-hover:text-primary"
                     >
                       Home

@@ -3,8 +3,7 @@ import GlobalApi from "../services/GlobalApi";
 import { useState } from "react";
 import { IoChevronBackOutline, IoChevronForwardOutline } from "react-icons/io5";
 import { useRef } from "react";
-import { Link } from "react-router-dom";
-const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original";
+import { CardMovies } from "./CardMovies";
 
 // eslint-disable-next-line react/prop-types
 const MovieList = ({ genreId }) => {
@@ -46,21 +45,14 @@ const MovieList = ({ genreId }) => {
             absolute right-0 md:mt-[110px] lg:mt-[150px]
             `}
         />
-        <Link
-          to={`/detail-movies`}
+        <div
           className=" flex gap-6 overflow-x-auto px-4 scrollbar-none scroll-smooth no-scrollbar"
           ref={elementRef}
         >
           {movieList.map((item) => (
-            <img
-              key={item.id}
-              src={IMAGE_BASE_URL + item.poster_path}
-              className="w-[150px] h-[240px] lg:w-[210px] lg:h-[310px] my-4 rounded-lg 
-            hover:border-[3px] border-gray-400 cursor-pointer
-            hover:scale-110 transition-all duration-150 ease-in"
-            ></img>
+            <CardMovies key={item.id} movie={item} />
           ))}
-        </Link>
+        </div>
       </div>
     </>
   );
