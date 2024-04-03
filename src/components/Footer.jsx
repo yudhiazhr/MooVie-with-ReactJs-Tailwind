@@ -13,7 +13,7 @@ export const Footer = () => {
       <ul className="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
         <li>
           <a
-            href=""
+            href="https://www.instagram.com/yudhiazhr/"
             target="_blank"
             rel="noreferrer"
             className="mr-4 hover:underline md:mr-6 "
@@ -23,7 +23,7 @@ export const Footer = () => {
         </li>
         <li>
           <a
-            href=""
+            href="https://www.linkedin.com/in/muhammad-yudhi-azhari-59282827b/"
             target="_blank"
             rel="noreferrer"
             className="mr-4 hover:underline md:mr-6"
@@ -33,27 +33,7 @@ export const Footer = () => {
         </li>
         <li>
           <a
-            href=""
-            target="_blank"
-            rel="noreferrer"
-            className="mr-4 hover:underline md:mr-6"
-          >
-            Twitter
-          </a>
-        </li>
-        <li>
-          <a
-            href=""
-            target="_blank"
-            rel="noreferrer"
-            className="mr-4 hover:underline md:mr-6"
-          >
-            Youtube
-          </a>
-        </li>
-        <li>
-          <a
-            href=""
+            href="https://github.com/yudhiazhr"
             target="_blank"
             rel="noreferrer"
             className="hover:underline"

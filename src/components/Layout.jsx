@@ -7,7 +7,7 @@ export const Layout = () => {
     <>
       <div className="container">
         <Header />
-        <section className=" min-h-[66dvh]">
+        <section className=" min-h-[86dvh]">
           <Outlet />
         </section>
       </div>
